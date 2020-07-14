@@ -172,7 +172,6 @@ yarn dev
     change={handleChangeSpr}  // 抛出的id组合
     index={index}  // 第几行 
     type={type}    // 类型
-    testttt
   />
 
 ```
