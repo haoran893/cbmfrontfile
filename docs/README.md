@@ -1,5 +1,20 @@
 # 香港中旅系统管理(前端文档)
 
+
+## 前端規範
+> (1)代码通过eslint检测.  
+> (2)每个页面组件必需以文件夹形式大驼峰命名 例如(SystemManage),首层组件必	需以index.jsx命名挂在文件夹的第一级,相应的样式文件也要放在同一级目录下.  
+> (3)页面里含有jsx代码的js代码必需以jsx命名,不含有jsx代码的必需以js命名.  
+> (4)只要有一个组件被不同的页面引用,必需写在src/component下被多个组件引用,並且有組件参数的說明.  
+> (5)组件必需划分为业务组件,跟ui组件,ui组件上不允许写业务,业务组件必需写在外層,两层上,ui组件只能做页面的纯展示.  
+> (6)方法超过10行必需写写相应的注释.  
+> (7)提供要求頁面对应的技术说明文档.  
+> (8)代码不能有error,warm非系統級別必需修复  
+> (9)使用對象聲明的方式組織model，不用手动注册model，文件名即 namespace，model 内如果没有声明 namespace，会以文件名作为 namespace，所有的model必須寫在對應的頁面文件下，比如src/page/foo/model.js 或是src/page/foo/model/b.js，所有的邏輯代碼必須寫在model文件内。  
+> (10)所有上傳必需走阿里雲oss接口.  
+> (11)单个頁面代码行数不能超过500行  
+
+## 項目介紹
 > 项目基于[React](https://react.docschina.org/)^16.8.6，默认所有代码采用 Hooks 形式进行开发，如无必要不要使用基于 Class 的形式写组件，所有的 react 组件相关代码最好以 jsx 结尾方便查看。
 
 项目是在 [Ant Design Pro](https://pro.ant.design).的基础上进行搭建，默认的 UI 框架[Ant Design](https://ant.design/docs/react/introduce-cn),数据管理[Redux 的封装 DVA](https://dvajs.com/guide/)，具体使用详情可以去相关官网查看
